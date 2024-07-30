@@ -1,0 +1,40 @@
+.Button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    white-space: nowrap;
+    font-family: "Roboto", sans-serif;
+}
+
+.Button:hover {
+    background-color: white;
+}
+
+.Button_default {
+    background-color: rgb(130, 130, 140);
+    color: white;
+}
+
+.Button_default:hover {
+    color: rgb(130, 130, 140);
+}
+
+.Button_positive {
+    background-color: rgb(76, 180, 249);
+    color: white;
+}
+
+.Button_positive:hover {
+    color: rgb(76, 180, 249);
+}
+
+.Button_negative {
+    background-color: #fd565f;
+    color: white;
+}
+
+.Button_negative:hover {
+    color:  #fd565f;
+}
