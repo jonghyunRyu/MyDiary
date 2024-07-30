@@ -1,0 +1,38 @@
+.Navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 200px;
+    height: 100vh;
+    left: 0;
+    border-right: 1px solid #e2e2e2;
+    padding-top: 80px;
+}
+
+.Navbar_link {
+    text-decoration: none;
+}
+
+.Navbar button {
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color:rgb(130, 130, 140); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px 0; 
+    width: 100%; 
+    text-align: start;
+}
+
+.Navbar button:hover {
+    background-color: rgb(76, 180, 249);
+    transform: scale(1.05); 
+}
+
+.Navbar button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 180, 249, 0.5); 
+}
