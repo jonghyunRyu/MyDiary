@@ -1,0 +1,21 @@
+.Home {
+    font-family: "Nanum Pen Script";
+    font-size: 30px;
+    text-align: center;
+}
+
+.Home > div {
+    margin: 20px 10px;
+    padding-right: 100px;
+}
+
+.Home > div:not(:last-child) {
+    color: rgb(253, 200, 3);
+}
+
+.Home > div:last-child {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(130, 130, 140);
+}
+
