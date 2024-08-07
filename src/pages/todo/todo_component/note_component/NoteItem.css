@@ -1,0 +1,96 @@
+/* .NoteItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.NoteItem .content {
+    display: flex;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.NoteItem .checkbox {
+    width: 20px;
+}
+
+.NoteItem .title {
+    flex: 1;
+}
+
+.NoteItem .date {
+    font-size: 14px;
+    color: gray;
+}
+
+.NoteItem button {
+    cursor: pointer;
+    color: gray;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+} */
+.NoteItem {
+  display: flex;
+  align-items: center;
+  padding: 3px 12px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.NoteItem .checkbox {
+}
+
+.NoteItem .checkbox input {
+  width: 18px;
+  height: 15px;
+}
+
+.NoteItem .content {
+  flex: 1;
+  font-size: 15px;
+  word-wrap: break-word;
+  overflow: auto;
+  max-height: 60px;
+}
+
+.NoteItem .content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.NoteItem .content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.NoteItem .content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.NoteItem .content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.NoteItem button {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.NoteItem button:hover {
+  background-color: #ff3333;
+}
