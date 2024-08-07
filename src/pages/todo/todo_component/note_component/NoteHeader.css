@@ -1,0 +1,48 @@
+/* .NoteHeader {
+    width: 80%;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background-color: rgb(130, 130, 140);
+    color: rgb(233, 233, 233);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.NoteHeader .title {
+    font-size: 30px;
+}
+
+.NoteHeader .date {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: black;
+    font-size: 16px;
+} */
+.NoteHeader {
+    margin-bottom: 25px;  /* 20px에서 25px로 증가 */
+    background-color: #ffffff;
+    border-radius: 10px;  /* 8px에서 10px로 증가 */
+    padding: 18px;  /* 15px에서 18px로 증가 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* 그림자 약간 강화 */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.NoteHeader .date {
+    font-size: 16px;  /* 14px에서 16px로 증가 */
+    color: #666;
+}
+
+.NoteHeader .title {
+    font-size: 24px;  /* 22px에서 24px로 증가 */
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
