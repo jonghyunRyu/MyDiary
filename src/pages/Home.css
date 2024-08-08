@@ -10,7 +10,7 @@
 }
 
 .Home > div:not(:last-child) {
-    color: rgb(253, 200, 3);
+    color: black;
 }
 
 .Home > div:last-child {

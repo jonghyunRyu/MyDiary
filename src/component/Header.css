@@ -2,14 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid #e2e2e2;
+    background-color: #2C3E50;
+    padding: 20px;
 }
 
 .Header .header_logo {
+    padding-left: 20px;
     font-family: "Playwrite BE VLG";
     font-size: 24px;
-    padding-left: 20px;
     text-decoration: none;
     color: inherit;
 }

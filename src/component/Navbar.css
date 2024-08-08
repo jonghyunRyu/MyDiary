@@ -5,8 +5,8 @@
     width: 200px;
     height: 100vh;
     left: 0;
-    border-right: 1px solid #e2e2e2;
     padding-top: 80px;
+    background-color: #ececec;
 }
 
 .Navbar_link {
