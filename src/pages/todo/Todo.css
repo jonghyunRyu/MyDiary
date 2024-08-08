@@ -1,0 +1,12 @@
+.Todo {
+    display: flex;
+    gap: 50px;
+}
+
+.Todo .Calendar {
+    width: 50%;
+}
+
+.Todo .Note {
+    width: 50%;
+}
