@@ -1,13 +1,16 @@
 import "./Cells.css";
 import { getStartDate, getTotalDays } from "../../../utils";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { DateContext, TodoStateContext } from "../Todo";
 
-const Cells = ({ date, dateClick }) => {
+const Cells = () => {
+    const todo = useContext(TodoStateContext);
     const [rows, setRows] = useState([]);
-
+    const { date } = useContext(DateContext);
+    
     const navigate = useNavigate();
-
+    
     useEffect(() => {
         const newDate = date;
         const totalDays = getTotalDays(newDate);
@@ -33,10 +36,13 @@ const Cells = ({ date, dateClick }) => {
                 if (flag) {
                     count++;
                     const id = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2, '0')}-${String(count).padStart(2, '0')}`;
+                    const hasTodo = todo.filter((it) => it.date === id).length > 0 ? "hasTodo" : "noTodo";
+
                     week.push(
-                        <div className={`${isWeekend}_Date`} key={id} 
+                        <div className={`${isWeekend}_Date ${hasTodo}`} key={id}
                         onClick={() => navigate(`/todo/${id}`)}>
                             <span>{count}</span>
+                            <div className="note"></div>
                         </div>
                     );
                 } else {
@@ -46,7 +52,7 @@ const Cells = ({ date, dateClick }) => {
                 }
             }
             newRows.push(
-                <div className="row" key={rowNum}>{week}</div>
+                <div className={`row`} key={rowNum}>{week}</div>
             );
             rowNum++;
             week = [];

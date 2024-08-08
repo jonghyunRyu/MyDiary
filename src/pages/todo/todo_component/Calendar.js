@@ -1,15 +1,15 @@
 import "./Calendar.css";
 import CalendarDays from "./CalendarDays";
 import Cells from "./Cells";
-import TodoHeader from "./TodoHeader";
+import CalendarHeader from "./CalendarHeader";
 
-const Calendar = ({date, onIncrease, onDecrease}) => {
+const Calendar = () => {
 
     return (
         <div className="calendar">
-            <TodoHeader date={date} onIncrease={onIncrease} onDecrease={onDecrease}/>
+            <CalendarHeader />
             <CalendarDays />
-            <Cells date={date} />
+            <Cells />
         </div>
     );
 };

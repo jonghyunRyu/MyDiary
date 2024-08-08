@@ -1,4 +1,5 @@
 import "./CalendarDays.css";
+import React from "react";
 
 const CalendarDays = () => {
     const week = ["일", "월", "화", "수", "목", "금", "토"];
@@ -16,4 +17,4 @@ const CalendarDays = () => {
     return <div className="CalendarDays">{days}</div>
 };
 
-export default CalendarDays;
+export default React.memo(CalendarDays);
