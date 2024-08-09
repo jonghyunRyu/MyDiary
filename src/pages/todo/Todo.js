@@ -16,6 +16,7 @@ function reducer(state, action) {
         case "CREATE": {
             const newState = [...state, action.newItem];
             localStorage.setItem("Todo", JSON.stringify(newState));
+            localStorage.setItem("TodoIndex", JSON.stringify(action.newItem.index));
             return newState;
         }
 
@@ -53,10 +54,15 @@ const Todo = () => {
         setDate(new Date(date.getFullYear(), date.getMonth() - 1, date.getDate()));
     };
 
-    const idRef = useRef(0);
+    const indexRef = useRef(0);
     const [todo, dispatch] = useReducer(reducer, []);
     
     useEffect(() => {
+        const savedIndex = localStorage.getItem("TodoIndex");
+        if (savedIndex) {
+            indexRef.current = parseInt(savedIndex, 10) + 1;
+        }
+
         const rawData = localStorage.getItem("Todo");
         if (!rawData) {
             setIsDataLoaded(true);
@@ -81,13 +87,13 @@ const Todo = () => {
         dispatch({
             type: "CREATE",
             newItem: {
-                index: idRef.current,
+                index: indexRef.current,
                 content,
                 isDone: false,
                 date: id,
             },
         });
-        idRef.current++;
+        indexRef.current++;
     };
 
     // 할 일 체크박스 업데이트 함수
